@@ -19,6 +19,18 @@ class Dice {
 		return Int.random(in: 1...6)
 	}
 	
+	func getScore(index: Int) -> Int {
+		if(index > -1 && index < scores.count){
+			return scores[index]
+		} else {
+			return 0
+		}
+	}
+	
+	func getScores() -> [Int] {
+		return scores
+	}
+	
 	func addScore(score: Int) {
 		scores.append(score)
 	}
